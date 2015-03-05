@@ -1,7 +1,5 @@
 #!/usr/bin/tclsh
 source ./random.tcl
-puts -nonewline "Choose a random string length: "
-flush stdout
 
 proc random_string {length} {
     set random_string ""
@@ -16,4 +14,6 @@ proc random_string {length} {
     return $random_string
 }
 
+puts -nonewline "Choose a random string length: "
+flush stdout
 puts [random_string [gets stdin]]
